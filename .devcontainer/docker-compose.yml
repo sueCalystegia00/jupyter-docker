@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  jupyter:
+    container_name: jupyter-container
+    image: jupyter/datascience-notebook
+    build: ./python
+    # ports:
+    #   - 8888:8888
+    user: root
+    environment:
+      - GRANT_SUDO=yes
+      - TZ=Asia/Tokyo
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - ../work/:/home/jovyan/work
+    command: start-notebook.sh
