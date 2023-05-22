@@ -6,6 +6,9 @@
 
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"python.pythonPath": "/opt/conda/bin/python3"
+			},
 			"extensions": [
 				"ms-python.python",
 				"ms-toolsai.jupyter",
